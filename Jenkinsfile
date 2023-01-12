@@ -13,14 +13,14 @@
                     }
                 }
                 stage('Compile'){
-                    agent {label 'agent1'}
+                    agent {label 'Agent1'}
                     steps{
                         echo 'compiling...'
                         sh 'mvn compile'
                 }
                 }
                 stage('CodeReview'){
-                    agent {label 'agent1'}
+                    agent {label 'Agent1'}
                     steps{
                     
                 echo 'codeReview...'
@@ -28,7 +28,7 @@
                     }
                 }
                 stage('UnitTest'){
-                    agent {label 'agent2'}
+                    agent {label 'Agent2'}
                     steps{
                     echo 'Testing'
                         sh 'mvn test'
